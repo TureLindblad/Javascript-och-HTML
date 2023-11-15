@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+$defaultTextColor: white;
+$purpleColor: rgb(191, 0, 255);
+$blueColor: rgb(0, 229, 255);
+$navbarPadding: 1em;
+$defaultFont: Helvetica;
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: $navbarPadding;
+
+    div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        white-space: nowrap;
+        ul {
+            padding: $navbarPadding;
+            list-style-type: none;
+            li {
+                display: inline;
+                padding-left: $navbarPadding;
+                a{
+                    color: $defaultTextColor; 
+                    text-decoration: none;
+                    font-family: $defaultFont;
+                    font-size: large;
+                    
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        form {
+            padding:0.5em;
+            background-color: white;
+            border-style: solid;
+            border-radius: 2em;
+            input{
+                outline: none;
+                border: none;
+                padding-left: 0.5em;
+            }
+            input::placeholder {
+                font-size: 1.1em;
+            }
+            button {
+                padding: 0.2em 0.5em 0.2em 0.5em;
+                border-width: 1px;
+                border-radius: 1em;
+                font-size: 1em;
+            }
+            button:hover {
+                background-color: $purpleColor;
+                color: $defaultTextColor;
+                border-color: $purpleColor;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.mainLogo {
+    width: 8em;
+    height: 4em;
+    .stop1 {
+        stop-color: $blueColor;
+    }
+
+    .stop2 {
+        stop-color: $purpleColor;
+    }
+
+    .ellipse {
+        fill: url(#grad1);
+    }
+
+    .text {
+        fill: $defaultTextColor;
+        font-size: 2em;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        font-family: $defaultFont;
+    }
+}
+
+main {
+    display: flex;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: rgb(46, 42, 41);
+}
+
+.inputForm {
+    width: 20em;
+    min-width: 20em;
+    padding: 2em;
+    margin: 2em;
+    font-family: $defaultFont;
+    color: $defaultTextColor;
+    display: flex;
+    flex-direction: column;
+    h1 {
+        margin: 0 auto;
+        padding-bottom: 1em;
+    }
+    input, button {
+        width: 50%;
+        height: 2em;
+        padding-left: 1em;
+        padding-right: 1em;
+        border-radius: 2em;
+    }
+    .formButton {
+        margin-top: 0.7em;
+        margin-left: 1em;
+        
+    }
+    .formButton:hover {
+        background-color: $purpleColor;
+        color: $defaultTextColor;
+        border-color: $purpleColor;
+        cursor: pointer;
+    }
+    label {
+        padding-left: 1em;
+        margin-top: 0.7em;
+        margin-bottom: 0.1em;
+    }
+    textarea {
+        height: 10em;
+        border-radius: 1em;
+        padding: 0.5em;
+        resize: none;
+    }
+}
+
+.programsLayout {
+    margin-top: 2em;
+    button {
+        border-style: none;
+        background: linear-gradient(35deg,rgb(0, 45, 159) , rgb(0, 26, 91), rgb(7, 106, 167));
+        fill: url(#grad1);
+        border-radius: 0.5em;
+        width: 16em;
+        height: 6em;
+        margin: 0.5em;
+        h2 {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $defaultTextColor;
+            font-family: $defaultFont;
+            overflow :hidden;
+            white-space: nowrap;
+        }
+    }
+    button:hover {
+        cursor: pointer;
+        width: 17em;
+        height: 7em;
+        margin: 0em;
+    }
+}
+
+.modalBackground {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    width: 30em;
+    height: 30em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 1px;
+    border-color: $purpleColor;
+    border-radius: 0.5em;
+    span {
+        color: $defaultTextColor;
+        align-self: flex-end;
+        margin: 0.5em;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    span:hover {
+        color: rgb(173, 173, 173);
+        text-decoration: none;
+        cursor: pointer;
+    }
+    h1 {
+        margin-top: 1em;
+        margin-bottom: 2em;
+        color: $defaultTextColor;
+        font-family: $defaultFont;
+    }
+    p {
+        margin: 1em;
+        color: $defaultTextColor;
+        font-family: $defaultFont;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: $defaultTextColor;
+    font-family: $defaultFont;
+    padding: 1em;
+    a{
+        margin-left: 1em;
+        text-decoration: none;
+        color: rgb(118, 157, 254);
+        font-weight: bold;
+    }
+}
